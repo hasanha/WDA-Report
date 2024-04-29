@@ -7,6 +7,8 @@ import qty from "../qty.png";
 import totalSale from "../totalSales.PNG";
 import totalQty from "../totalQty.PNG";
 import salesByCity from "../saleByCity.png";
+import a from "../1.PNG";
+import b from "../2.PNG";
 
 const PerformanceOverview = () => {
   return (
@@ -95,7 +97,14 @@ const PerformanceOverview = () => {
                 </ul>
               </li>
             </ol>
-
+            <div className="col-12 ">
+              <h2>Total Sale By Product Line (Ascending Order)</h2>
+              <img src={totalSale} alt="totalChart" width="90%" />
+            </div>
+            <div className="col-12 ">
+              <h2>2003-2005 Q'ty By Product Line</h2>
+              <img src={totalQty} alt="totalChart" width="90%" />
+            </div>
             <h2>Recommendations</h2>
             <ul>
               <li>
@@ -109,6 +118,14 @@ const PerformanceOverview = () => {
                 understand the factors driving their success.
               </li>
             </ul>
+            <div className="col-12 ">
+              <h2>Total Sale By Product Line (Ascending Order)</h2>
+              <img src={a} alt="totalChart" width="90%" />
+            </div>
+            <div className="col-12 ">
+              <h2>2003-2005 Q'ty By Product Line</h2>
+              <img src={b} alt="totalChart" width="90%" />
+            </div>
             <div>
               <img src={chart} alt="chart" height="800px" width="800px" />
               <p>
@@ -229,18 +246,16 @@ const PerformanceOverview = () => {
                   width="600px"
                 />
               </div>
-              <div className="col-6">
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+                className="col-6"
+              >
                 <h2>2003-2005 Q'ty Product Line</h2>
                 <img src={qty} alt="QtyChart" height="600px" width="600px" />
-              </div>
-              <div className="col-12 ">
-                <h2>Total Sale By Product Line (Ascending Order)</h2>
-                <img src={totalSale} alt="totalChart" width="90%" />
-              </div>
-              <div className="col-12 ">
-                <h2>2003-2005 Q'ty By Product Line</h2>
-                <img src={totalQty} alt="totalChart" width="90%" />
-              </div>
+              </motion.div>
+
               <div className="col-6 ">
                 <h2>Sales By City</h2>
                 <img src={salesByCity} alt="salesByCityChart" width="90%" />
