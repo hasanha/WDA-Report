@@ -2,6 +2,11 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import { motion } from "framer-motion";
 import chart from "../b0ba80ee-0716-4c84-afa5-8b18c05cdb40.png";
+import revenue from "../download.png";
+import qty from "../qty.png";
+import totalSale from "../totalSales.PNG";
+import totalQty from "../totalQty.PNG";
+import salesByCity from "../saleByCity.png";
 
 const PerformanceOverview = () => {
   return (
@@ -214,6 +219,33 @@ const PerformanceOverview = () => {
                 </li>
               </ul>
             </p>
+            <div className="row">
+              <div className="col-6">
+                <h2>2003-2005 Revenue by Product Line</h2>
+                <img
+                  src={revenue}
+                  alt="revenueChart"
+                  height="600px"
+                  width="600px"
+                />
+              </div>
+              <div className="col-6">
+                <h2>2003-2005 Q'ty Product Line</h2>
+                <img src={qty} alt="QtyChart" height="600px" width="600px" />
+              </div>
+              <div className="col-12 ">
+                <h2>Total Sale By Product Line (Ascending Order)</h2>
+                <img src={totalSale} alt="totalChart" width="90%" />
+              </div>
+              <div className="col-12 ">
+                <h2>2003-2005 Q'ty By Product Line</h2>
+                <img src={totalQty} alt="totalChart" width="90%" />
+              </div>
+              <div className="col-6 ">
+                <h2>Sales By City</h2>
+                <img src={salesByCity} alt="salesByCityChart" width="90%" />
+              </div>
+            </div>
           </motion.div>
         </div>
       </Card>
